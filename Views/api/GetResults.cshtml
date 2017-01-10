@@ -1,0 +1,13 @@
+﻿@{
+    // serializam modelul intr-un MemoryStream
+    MemoryStream stream = new MemoryStream();
+    System.Runtime.Serialization.Json.DataContractJsonSerializer ser = new System.Runtime.Serialization.Json.DataContractJsonSerializer(typeof(APIGovApp.Models.ViewModel));
+
+    // scriem JSON in stream
+    ser.WriteObject(stream, Model);
+
+    // afiseaza outputul JSON
+    stream.Position = 0;
+    StreamReader sr = new StreamReader(stream);
+    <p>@sr.ReadToEnd()</p>
+}

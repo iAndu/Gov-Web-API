@@ -1,0 +1,166 @@
+﻿<link rel="stylesheet" href="~/Content/StyleSheets/style.css"/>
+<link rel="stylesheet" href="~/Content/bootstrap.css"/>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="~/Scripts/script.js" type="text/javascript"></script>
+<script src="~/Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+<body> 
+      <div id="nav_bar">
+       <ul class="menu">
+           <li id="start"><a href="#">API Nomenclator</a></li>
+           <li><a href="#titleUtilizare">Utilizare</a></li>
+           <li><a href="#titleParametrii">Parametrii</a></li>
+           <li><a href="#titleExemple">Exemple</a></li>
+       </ul>
+   </div>
+   <div class="body">
+       <div class="container">
+           <h1 class="title" id="titleTop">API Nomenclator Strazi Judete Romania</h1>
+           <hr />
+           <div class="col-lg-10 desc" id="titleUtilizare">
+               <p>Un Serviciu Web pentru a obtine informatiile despre nomenclatura localitatilor din Romania.</p>
+           </div>
+       </div>
+       <div class="container">
+           <h1 class="title">Utilizare</h1>
+           <hr />
+           <div class="col-lg-10 desc" id="titleParametrii">
+               <p>Base URL:</p>
+               <pre>.../api/GetResults</pre>
+           </div>
+       </div>
+       <div class="container">
+           <h1 class="title">Parametrii</h1>
+           <hr />
+           <div class="col-lg-10 desc">
+               <table class="table table-bordered">
+                   <thead>
+                       <tr>
+                           <th>Parametru</th>
+                           <th>Necesar</th>
+                           <th>Optiuni Valide</th>
+                           <th>Valoare implicita</th>
+                           <th>Descriere</th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       <tr>
+                           <td>token</td>
+                           <td><pre class="required">DA</pre></td>
+                           <td></td>
+                           <td>&lt;empty&gt;</td>
+                           <td>Un token valid inregistrat</td>
+                       </tr>
+                       <tr>
+                           <td>jud_cod</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td> > 0 </td>
+                           <td>&lt;empty&gt;</td>
+                           <td>Codul de judet folosit de cautat</td>
+                       </tr>
+                       <tr>
+                           <td>cod</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td> > 0 </td>
+                           <td>&lt;empty&gt;</td>
+                           <td></td>
+                       </tr>
+                       <tr>
+                           <td>cod_politie</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td> > 0 </td>
+                           <td>&lt;empty&gt;</td>
+                           <td>Codul politiei</td>
+                       </tr>
+                       <tr>
+                           <td>denumire</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td></td>
+                           <td>&lt;empty&gt;</td>
+                           <td>Denumirea localitatii de cautat</td>
+                       </tr>
+                       <tr>
+                           <td>cod_tpl</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td>Sat, Ors, Com</td>
+                           <td>&lt;empty&gt;</td>
+                           <td>Codul tipului de localitate</td>
+                       </tr>
+                       <tr>
+                           <td>cod_postal</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td> > 0 </td>
+                           <td>&lt;empty&gt;</td>
+                           <td>Codul postal de cautat</td>
+                       </tr>
+                       <tr>
+                           <td>cod_sar</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td>A - Z</td>
+                           <td>&lt;empty&gt;</td>
+                           <td>Codul SAR de cautat</td>
+                       </tr>
+                       <tr>
+                           <td>loc_jud_cod</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td> > 0 </td>
+                           <td>&lt;empty&gt;</td>
+                           <td>Codul localitatii din judet</td>
+                       </tr>
+                       <tr>
+                           <td>cod_loc</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td> > 0 </td>
+                           <td>&lt;empty&gt;</td>
+                           <td>Codul localitatii de cautat</td>
+                       </tr>
+                       <tr>
+                           <td>are_primarie</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td>A, N</td>
+                           <td>&lt;empty&gt;</td>
+                           <td>Returneaza daca are sau nu primarie</td>
+                       </tr>
+                       <tr>
+                           <td>cod_fiscal_primarie</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td> > 0 </td>
+                           <td>&lt;empty&gt;</td>
+                           <td>Codul fiscal al primariei</td>
+                       </tr>
+                       <tr>
+                           <td>sar_cod_mf</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td>A - Z</td>
+                           <td>&lt;empty&gt;</td>
+                           <td>Codul SAR MF</td>
+                       </tr>
+                       <tr>
+                           <td>cod_siruta</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td> > 0 </td>
+                           <td>&lt;empty&gt;</td>
+                           <td>Codul SIRUTA de cautat</td>
+                       </tr>
+                       <tr id="titleExemple">
+                           <td>cod_siruta_tata</td>
+                           <td><pre class="optional">NU</pre></td>
+                           <td> > 0 </td>
+                           <td>&lt;empty&gt;</td>
+                           <td>COD SIRUTA TATA de cautat</td>
+                       </tr>
+                   </tbody>
+               </table>
+           </div>
+       </div>
+   <div class="container">
+       <h1 class="title">Exemple</h1>
+       <div class="desc col-lg-10">
+           <p>GET: <pre>.../api/GetResults?token=&lt;token&gt;</pre></p>
+       </div>
+   </div>
+</div>
+</body>
+
+
+
+
